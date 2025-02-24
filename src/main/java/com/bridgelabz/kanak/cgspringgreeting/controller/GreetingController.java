@@ -58,6 +58,10 @@ public class GreetingController {
         return new ResponseEntity<>(newgreeting,HttpStatus.OK);
 
     }
+    @DeleteMapping("/{id}")
+    public void deleteGreeting(@PathVariable Long id){
+        greetingRepository.deleteById(id);
+    }
 
 
 
