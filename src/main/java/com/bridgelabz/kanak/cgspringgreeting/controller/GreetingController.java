@@ -6,6 +6,8 @@ import com.bridgelabz.kanak.cgspringgreeting.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/greeting")
 public class GreetingController {
@@ -38,6 +40,11 @@ public class GreetingController {
     public Greeting getGreeting(@PathVariable long id){
         return greetingRepository.findById(id).orElse(null);
     }
+    @GetMapping
+    public List<Greeting> getAllGreeting(){
+        return greetingRepository.findAll();
+    }
+
 
 
 
