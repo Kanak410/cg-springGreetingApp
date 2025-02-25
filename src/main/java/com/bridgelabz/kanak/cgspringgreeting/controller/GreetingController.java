@@ -55,7 +55,7 @@ public class GreetingController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
         }
-        return new ResponseEntity<>(newgreeting,HttpStatus.OK);
+        return new ResponseEntity<>(existingGreeting,HttpStatus.OK);
 
     }
 
